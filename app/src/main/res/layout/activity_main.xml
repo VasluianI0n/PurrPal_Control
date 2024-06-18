@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></Space>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="390dp"
+        android:layout_height="390dp"
+        android:id="@+id/cameraView"
+        android:src="@color/white"
+        android:scaleType="centerCrop"></ImageView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></Space>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="20">
+
+        </Space>
+
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/flashlight_off"
+            android:scaleType="fitCenter"
+            android:background="@drawable/rounded_button_off"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:hapticFeedbackEnabled="true"
+            android:id="@+id/lightButton"
+            ></ImageButton>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="80"></Space>
+        <com.codertainment.dpadview.DPadView
+            android:id="@+id/dpad"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:directionSectionAngle="75"
+            android:src="@drawable/ic_gamepad_black"
+            android:layout_weight="30"
+            app:pressedColor="@color/design_default_color_primary"
+            app:centerCircleEnabled="false"
+            android:hapticFeedbackEnabled="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/testView"
+        android:text=""></TextView>
+
+
+
+</LinearLayout>
